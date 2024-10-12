@@ -96,8 +96,8 @@ int main()
 
     int counter = 0;
     for (const auto& area : areas) {
-        Node node1(nodes[2*counter][0], nodes[2*counter][1]);
-        Node node2(nodes[2*counter+1][0], nodes[2*counter+1][1]);
+        Node node1(nodes[2*counter][0], nodes[2*counter][1]); // Pega o nó 1. Como começamos a contar do 0, multiplicamos por 2 o número da linha
+        Node node2(nodes[2*counter+1][0], nodes[2*counter+1][1]); // Pega o nó 2. Como começamos a contar do 0, multiplicamos por 2 o número da linha e somamos 1
         Element element(node1, node2, area);
         counter++;
         printf("Elemento %d: Volume = %.2f, Comprimento = %.2f\n", counter, element.volume(), element.lenght());
